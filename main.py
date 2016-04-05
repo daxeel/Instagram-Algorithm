@@ -2,11 +2,7 @@ from bs4 import BeautifulSoup
 import urllib2
 import json
 
-# mehul3446
-# the.success.club
-# fullyrawkristina
-
-username = '24hoursuccess'
+username = 'daxeel_soni'
 url = "https://www.instagram.com/%s/" % username
 request = urllib2.urlopen(url)
 soup = BeautifulSoup(request, "html.parser")
