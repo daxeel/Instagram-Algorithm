@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 
 ############################## Credits #############################
-# PROJECT  : Instagram Algorithm
+# PROJECT      : Instagram Algorithm
 # DESCRIPTION  : A simple algorithm designed to get the relevant instagram users from particular given user profile.
 # AUTHOR       : Daxeel Soni
 #
@@ -13,6 +13,7 @@ from bs4 import BeautifulSoup
 import urllib2
 import json
 import sys
+
 
 ######################## GET CLI ARGUMENTS ##########################
 args = sys.argv
@@ -40,13 +41,13 @@ def get_hashtags():
 ################### START GETTING SUGGESTED USERS ####################
 def get_users():
 	hashtags = get_hashtags()
-	print str(len(hashtags)) + " interests found! \n\n"
+	print "\n" + str(len(hashtags)) + " interests found! \n"
 	USERS = []
 	NO_TAGS = 0
 	if len(hashtags) >= 10:NO_TAGS = 10
 	else:NO_TAGS = len(hashtags)
 	for each in range(NO_TAGS):
-		print "Scanning intrest no - " + str(each+1) 
+		print "Scanning interest no - " + str(each+1) 
 		print '-'*10
 		each = hashtags[each]
 		tag = each[0]
@@ -58,7 +59,7 @@ def get_users():
 		for post_no in range(each[1]):
 			try:
 				user_id = posts[post_no]['owner']['id']
-				token = "XXXX-XXXX-XXXX-XXXX"
+				token = "XXX-XXXX-XXXX-XXXX"
 				api_req = "https://api.instagram.com/v1/users/" + user_id + "?access_token=" + token
 				api_call = urllib2.urlopen(api_req)
 				api_data = json.loads(api_call.read())
@@ -67,7 +68,7 @@ def get_users():
 					USERS.append(username)
 			except:
 				print "One intrest skipped."
-	print str(len(USERS)) + " users found"
+	print "\n" + str(len(USERS)) + " users found\n---------------"
 	print USERS
 
 ################## INITIAL FUNCTION FOR BASIC SETUP ###################
