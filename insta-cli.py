@@ -72,6 +72,7 @@ def get_users():
 
 ################## INITIAL FUNCTION FOR BASIC SETUP ###################
 def setup():
+	global data
 	username = args[1]
 	url = "https://www.instagram.com/%s/" % username
 	request = urllib2.urlopen(url)
