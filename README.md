@@ -6,7 +6,7 @@ Version 1 developed. Working on making it more accurate.
 Under development
 
 # Algorithm
-<img src="https://raw.githubusercontent.com/daxeel/Instagram-Algorithm/master/Algoritm_Flowchart(V1).png">
+<img id="flowchart" src="https://raw.githubusercontent.com/daxeel/Instagram-Algorithm/master/Algoritm_Flowchart(V1).png">
 
 # Test on your machine
 ```sh
