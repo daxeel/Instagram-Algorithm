@@ -54,5 +54,6 @@ Will write about it soon.
 # Programming Concepts Used
 1. Web Scraping
 2. Text Analysis
-3. API Interaction
-4. Error Handling
+3. Data Mining
+4. API Interaction
+5. Error Handling
