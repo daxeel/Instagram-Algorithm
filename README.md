@@ -2,7 +2,11 @@
 A simple algorithm designed to get the relevant users to particular given user profile.
 
 # Status
+Version 1 developed. Working on making it more accurate.
 Under development
+
+# Algorithm
+<img src="https://raw.githubusercontent.com/daxeel/Instagram-Algorithm/master/Algoritm_Flowchart(V1).png">
 
 # Test on your machine
 ```sh
@@ -47,9 +51,6 @@ Scanning interest no - 10
 ---------------
 [u'garvigujarati', u'malhar028', u'shagunchauhan', u'codergirl_', u'nellysugu', u'mindsetofgreatness', u'motivation.entrepreneur', u'modaecustomizacao', u'lovetutorialsx', u'spoonuniversity', u'houseofhighlights', u'sbwheels_goryaev', u'egeozmat', u'deepika__perfection', u'niralivakil98', u'starvingtime', u'savage.vids', u'flamingeos', u'natgeoyourshot', u'motivation', u'dressmybff']
 ```
-
-# Algorithm
-Will write about it soon.
 
 # Programming Concepts Used
 1. Web Scraping
