@@ -9,10 +9,19 @@ Under development
 <img id="flowchart" src="https://raw.githubusercontent.com/daxeel/Instagram-Algorithm/master/Algoritm_Flowchart(V1).png">
 
 # Test on your machine
+To run this, you need Instagram consumer key. Follwo these steps.<br>
+1. Go to https://www.instagram.com/developer.<br>
+2. Login with your Instagram account.<br>
+3. Go to "Manage Clients"<br>
+4. Click on "Register a new client"<br>
+5. Fill out the details and get the Consumer Key.<br>
+Open terminal and follow this commands.
 ```sh
 git clone https://github.com/daxeel/Instagram-Algorithm.git
 cd Instagram-Algorithm
 ```
+Open insta-cli.py in your text editor. Replace XXXX-XXXX-XXXX-XXXX with your cosumer key.
+Now start script by entering this command in terminal.
 ```py
 python insta-cli.py [INSTAGRAM_USERNAME]
 ```
