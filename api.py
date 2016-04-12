@@ -53,7 +53,7 @@ def get_users():
 		for post_no in range(each[1]):
 			try:
 				user_id = posts[post_no]['owner']['id']
-				token = "299186020.1fb234f.1026357322834c109b0d986cd593d53d"
+				token = "YOUR INSTAGRAM TOKEN"
 				api_req = "https://api.instagram.com/v1/users/" + user_id + "?access_token=" + token
 				api_call = urllib2.urlopen(api_req)
 				api_data = json.loads(api_call.read())
