@@ -39,6 +39,7 @@ def get_hashtags():
 def get_users():
 	hashtags = get_hashtags()
 	USERS = []
+	FINAL_DATA = []
 	NO_TAGS = 0
 	if len(hashtags) >= 10:NO_TAGS = 10
 	else:NO_TAGS = len(hashtags)
@@ -51,18 +52,23 @@ def get_users():
 		data = json.loads(soup.find_all('script')[6].string[21:-1])
 		posts = data['entry_data']['TagPage'][0]['tag']['top_posts']['nodes']
 		for post_no in range(each[1]):
+			TEMP = {}
 			try:
 				user_id = posts[post_no]['owner']['id']
-				token = "YOUR INSTAGRAM TOKEN"
+				token = "INSTAGRAM ACCESS TOKEN"
 				api_req = "https://api.instagram.com/v1/users/" + user_id + "?access_token=" + token
 				api_call = urllib2.urlopen(api_req)
 				api_data = json.loads(api_call.read())
 				username = api_data['data']['username']
+				profile_picture = api_data['data']['profile_picture']
 				if username not in USERS:
+					TEMP['username'] = username
+					TEMP['profile_picture'] = profile_picture
 					USERS.append(username)
 			except:
 				pass
-	return json.dumps(USERS)
+			FINAL_DATA.append(TEMP)
+	return json.dumps(FINAL_DATA)
 
 ################## INITIAL FUNCTION FOR BASIC SETUP ###################
 def setup(username):
